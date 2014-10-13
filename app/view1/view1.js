@@ -9,6 +9,14 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope', function($scope) {
 
+	// $scope.datavar = "Dani";
+
+	$scope.todos = [
+	{text:'learn angular v1.26 seed structure', done:false},
+	{text:'build an angular app woth v1.26', done: false },
+	{text:'eat more fruits and vegetables', done: true }
+
+	];
 }]);
