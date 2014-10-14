@@ -48,10 +48,11 @@
       </div>
       <div class="row">
         <div class="col-sm-4">
+        	<span>{{remaining() }} of {{todos.length}} remaining </span>
           <ul class="list-group">
             <li ng-repeat="todo in todos" class="list-group-item">
             	<input type="checkbox" ng-model="todo.done">
-					<span> {{todo.text}} </span>
+					<span class="done-{{todo.done}} ">{{todo.text}}</span>
             </li>
           </ul>
         </div><!-- /.col-sm-4 -->
@@ -82,7 +83,12 @@
             </a>
           </div>
         </div><!-- /.col-sm-4 -->
-      </div>
+      </div><!-- /end row -->
+
+      	<form ng-submit="addTodo()">
+			<input type="text" ng-model="todoText" size="30" placeholder="Add new todo">
+			<input class="btn-primary" type="submit" value="add">
+		</form>
 </div>
 
 

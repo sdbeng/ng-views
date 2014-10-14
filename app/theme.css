@@ -16,3 +16,8 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+
+.done-true {
+  text-decoration: line-through;
+  color: #ddd;
+}

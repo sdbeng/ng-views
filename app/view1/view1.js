@@ -15,8 +15,24 @@ angular.module('myApp.view1', ['ngRoute'])
 
 	$scope.todos = [
 	{text:'learn angular v1.26 seed structure', done:false},
-	{text:'build an angular app woth v1.26', done: false },
+	{text:'build an angular app with v1.26', done: false },
 	{text:'eat more fruits and vegetables', done: true }
 
 	];
+
+	$scope.addTodo = function() {
+		$scope.todos.push({text:$scope.todotext, done: false});
+		$scope.todotext = '';
+	};
+
+	$scope.remaining = function() {
+		var count = 0;
+		angular.forEach($scope.todos, function() {
+			
+		});
+	};
 }]);
+
+
+
+
